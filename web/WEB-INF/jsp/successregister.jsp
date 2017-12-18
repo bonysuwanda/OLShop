@@ -11,8 +11,11 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Register Success</title>
+        <link href="<c:url value="/resources/css/bootstrap.css" />" rel="stylesheet">
     </head>
     <body>
+        <jsp:include page="head.jsp"/> 
+        <div class="container">
         <h1>Register Success!</h1>
         Nama Lengkap : ${data.namaLengkap} <br/>
         E-mail       : ${data.email} <br/>
@@ -21,6 +24,7 @@
         Username     : ${data.username} <br/>
         Password     : ${data.password} <br/>
         
-        <a href="${pageContext.request.contextPath}/login">Please Login</a>
+        <br/><a href="${pageContext.request.contextPath}/login">Please Login</a>
+        </div>
     </body>
 </html>

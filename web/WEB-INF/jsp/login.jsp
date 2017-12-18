@@ -11,7 +11,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Login Page</title>
         <link href="<c:url value="/resources/css/bootstrap.css" />" rel="stylesheet">
     </head>
     <body>

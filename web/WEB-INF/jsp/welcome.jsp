@@ -16,8 +16,8 @@
     <body>
         <jsp:include page="head.jsp"/>
         <div class="container">
-        <h1>${msg} BukaTiker.com</h1>
-        <a href="product"><h5>Our Prodoct</h5></a>
+        <h1 align="center">${msg} BukaTiker.com</h1>
+        <a href="product"><h5 align="center">Our Prodoct</h5></a>
         </div>
     </body>
 </html>
