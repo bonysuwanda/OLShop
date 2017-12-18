@@ -20,10 +20,10 @@
              
              <div class="form-group"></div>
         <h1>Login</h1>
-         <form:form action="${pageContext.request.contextPath}/login/check" modelAttribute="login" method="POST" class="form-horizontal">
+         <form:form action="${pageContext.request.contextPath}/login/check" modelAttribute="loginBean" method="POST" class="form-horizontal">
 
                         <div class="form-group">
-                            <form:label  path="username" class="col-sm-4 control-label">Username</form:label>
+                            <form:label path="username" class="col-sm-4 control-label">Username</form:label>
                                 <div class="col-sm-4">
                                 <form:input path="username" class="form-control" />
                             </div>

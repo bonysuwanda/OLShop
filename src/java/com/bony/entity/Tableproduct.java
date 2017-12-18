@@ -29,7 +29,8 @@ import javax.persistence.Table;
     , @NamedQuery(name = "Tableproduct.findById", query = "SELECT t FROM Tableproduct t WHERE t.id = :id")
     , @NamedQuery(name = "Tableproduct.findByHarga", query = "SELECT t FROM Tableproduct t WHERE t.harga = :harga")
     , @NamedQuery(name = "Tableproduct.findByProductNama", query = "SELECT t FROM Tableproduct t WHERE t.productNama = :productNama")
-    , @NamedQuery(name = "Tableproduct.findByStok", query = "SELECT t FROM Tableproduct t WHERE t.stok = :stok")})
+    , @NamedQuery(name = "Tableproduct.findByStok", query = "SELECT t FROM Tableproduct t WHERE t.stok = :stok")
+    , @NamedQuery(name = "Tableproduct.findByImages", query = "SELECT t FROM Tableproduct t WHERE t.images = :images")})
 public class Tableproduct implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -45,6 +46,8 @@ public class Tableproduct implements Serializable {
     private String productNama;
     @Column(name = "STOK")
     private Integer stok;
+    @Column(name = "IMAGES")
+    private String images;
     @JoinColumn(name = "CART_ID", referencedColumnName = "ID")
     @ManyToOne
     private Tableorder cartId;
@@ -86,6 +89,14 @@ public class Tableproduct implements Serializable {
 
     public void setStok(Integer stok) {
         this.stok = stok;
+    }
+
+    public String getImages() {
+        return images;
+    }
+
+    public void setImages(String images) {
+        this.images = images;
     }
 
     public Tableorder getCartId() {

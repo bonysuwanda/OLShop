@@ -8,19 +8,21 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
+        <jsp:include page="head.jsp"/> 
+        <body>
+        <div class="container">
         <h1>Our Product</h1>
-        <table>
-            <tr>
-                <td>
-                    <a href=""></a>
-                </td>
-            </tr>
+        <c:forEach items="${prod}" var="p">
             
-        </table>
+            <div  align="center"  class="col-sm-4">
+            <a href="${pageContext.request.contextPath}/product/detail/${p.id}">
+                <image src="<c:url value="/resources/images/${p.images}" />"widht="200px" height="200px"/>
+            </a><br/>
+            
+             ${p.productNama} <br/>
+            Harga       : ${p.harga}       <br/>
+            </div>
+        </c:forEach>
+        </div>
     </body>
 </html>

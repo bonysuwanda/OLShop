@@ -32,7 +32,7 @@ public class LoginController {
     @RequestMapping()
     public String goToLogin(Model model){
         LoginFormBean loginBean = new LoginFormBean();
-        model.addAttribute("login", loginBean);
+        model.addAttribute("loginBean", loginBean);
         return "login";
     }
     
@@ -40,7 +40,7 @@ public class LoginController {
     public String checkLogin (HttpSession session, @ModelAttribute("login") LoginFormBean loginBean,
             HttpServletResponse response, Model model){
         Tablecustomers customers = cs.findByUsername(loginBean.getUsername());
-        if(customers.getUsername()==null){
+        if(customers.getUsername()== null){
             model.addAttribute("error", "Username atau Password Anda Salah");
             return "login";
         }
@@ -54,6 +54,6 @@ public class LoginController {
     @RequestMapping(value ="/out")
     public String logOut(HttpSession session, Model model){
         session.invalidate();
-        return "welcome";
+        return "redirect:/welcome";
     }
 }

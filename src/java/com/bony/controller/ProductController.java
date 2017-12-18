@@ -28,14 +28,14 @@ public class ProductController {
     @RequestMapping(value="/all")
     public String seeOurProduct(Model model){
         List<Tableproduct> product = ps.findAll();
-        model.addAttribute("product",product);
+        model.addAttribute("prod",product);
         return "product";
     }
     
-    @RequestMapping(value="/{ID}")
+    @RequestMapping(value="/detail/{ID}")
     public String detailProduct (@PathVariable Integer ID ,Model model){
         Tableproduct product = ps.findById(ID);
-        model.addAttribute("detproduct",ID);
-        return "datailproduct";
+        model.addAttribute("dp",product);
+        return "detailproduct";
     }
 }

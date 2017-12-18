@@ -44,10 +44,11 @@ public class CustomerService {
     public Tablecustomers findByUsername(String username){
         Tablecustomers customer = new Tablecustomers();
         try {
-            setEm(emf.createEntityManager());
-            Query query = getEm().createQuery("Select c from Tablecustomers c where c.username = :username");
-            query.setParameter("username", username);
-            customer = (Tablecustomers) query.getSingleResult();
+            //setEm(emf.createEntityManager());
+            em = emf.createEntityManager();
+            
+            customer = (Tablecustomers) em.createNamedQuery("Tablecustomers.findByUsername").setParameter("username", username).getSingleResult();
+            System.out.println("Nama CUstomers: " + customer.getUsername());
         } catch (NoResultException nre) {
             logger.severe("Username tidak ada");
         }

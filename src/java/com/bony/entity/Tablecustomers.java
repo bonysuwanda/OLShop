@@ -51,7 +51,6 @@ public class Tablecustomers implements Serializable {
     private String phone;
     @Column(name = "USERNAME")
     private String username;
-    @Lob
     @Column(name = "ADDRESS")
     private String address;
     @OneToMany(mappedBy = "customerId")
