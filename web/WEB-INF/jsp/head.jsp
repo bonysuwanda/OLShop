@@ -19,7 +19,9 @@
                 <c:if test="${not empty sessionScope.user}">
                    
      
-                    <li><a href="#">Cart ${carts}</a></li>
+                    <li><a href="#">
+                        <span class="glyphicon glyphicon-shopping-cart">Cart ${carts}</span></a>
+                    </li>
                   
                  
                      
@@ -27,8 +29,12 @@
                     
                     </c:if>  
                     <c:if test="${empty sessionScope.user}">
-                        <li><a href="${pageContext.request.contextPath}/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                    <li><a href="${pageContext.request.contextPath}/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        <li><a href="${pageContext.request.contextPath}/register">
+                            <span class="glyphicon glyphicon-user"></span> Sign Up</a>
+                        </li>
+                        <li><a href="${pageContext.request.contextPath}/login">
+                            <span class="glyphicon glyphicon-log-in"></span> Login</a>
+                        </li>
                     </c:if>  
 
             </ul>
