@@ -21,6 +21,12 @@
                     <a class="navbar-brand" href="${pageContext.request.contextPath}">OLShop</a>
                 </div>
 
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="${pageContext.request.contextPath}/product/all">Our Prodoct</a>
+                    </li>
+                            
+                </ul>
                 <ul class="nav navbar-nav navbar-right">
 
 
