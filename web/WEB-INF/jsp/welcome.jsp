@@ -6,9 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE html>
-<html>
-    
+
         <jsp:include page="head.jsp"/>
         <div class="container">
         <h1 align="center">${msg} BukaTiker.com</h1>
